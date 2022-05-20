@@ -2,7 +2,14 @@
 <html>
    <body>
      <nav class="navbar">
-       <a class="nav-brand" href="#">Corey Wilder</a>
+       <div class="row">
+         <div class="nav-left">
+           
+         </div>
+         <div class="nav-right">
+           <a class="nav-brand" href="#">Corey Wilder</a>
+         </div>
+       </div>
      </nav>
    <p>text</p>
    </body>
@@ -16,19 +23,30 @@
     display:block;
     padding:1rem;
     }
-
     a {
       text-decoration:none;
     }
-
     body {
       margin:0;
     }
-
     .nav-brand {
       font-size:2rem;
       color:#cccccc;
     }
+    .row {
+      display:flex;
+      flex-wrap: wrap;
+    }
+    @media (min-width: 992px){
+      .nav-right {
+        flex: 0 0 25%;
+        max-width: 25%;
+        text-align: right;
+      }
+      .nav-left {
+        flex: 0 0 75%;
+        max-width: 75%;
+      }}
   </style>
 
 </html>
